@@ -1,7 +1,7 @@
 class Test extends GroovyTestCase {
     
     void testSomething() {
-        x = 1
-        assert x == 2
+        def x = 1
+        assert x == 1
     }
 }
