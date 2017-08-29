@@ -1,7 +1,8 @@
+evaluate(new File("ISBN.groovy"))
+
 class Test extends GroovyTestCase {
     
-    void testSomething() {
-        def x = 1
+    void testMethod() {
         assert x == 1
     }
 }
