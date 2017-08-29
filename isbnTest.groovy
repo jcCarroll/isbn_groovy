@@ -1,3 +1,4 @@
+
 evaluate(new File("ISBN.groovy"))
 
 class Test extends GroovyTestCase {
