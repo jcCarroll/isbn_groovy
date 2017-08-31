@@ -1,8 +1,17 @@
+class IsbnTest extends GroovyTestCase {
+   void testDisplay() {
+      def stud = new Isbn(name : 'Joe', ID : 1)
+      def expected = 'Joe1'
+      assertToString(stud.Display(), expected)
+   }
 
-
-class Test extends GroovyTestCase {
-    
-    void testMethod() {
-        assert x == 1
-    }
+   void testLengthTen() {
+       def length = new Isbn(isbn : '1234567890')
+       assertToString(length.IsTenDig(), 'true')
+   }
+   
+   void testLengthNotTen() {
+       def lengthBad = new Isbn(isbn : '123456')
+       assertToString(lengthBad.IsTenDig(), 'null')
+   }
 }
