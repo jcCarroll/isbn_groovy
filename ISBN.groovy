@@ -1,6 +1,8 @@
+class GroovyISBN {
+    
+    static void main(String[] args){
 
-class Example {
-   static def testMethod(x) {
-       x + 1
-   }
+        
+
+    }
 }

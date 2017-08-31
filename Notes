@@ -3,3 +3,6 @@ Groovy is not running.
 
 I keep getting an error when trying to run a groovy file.
     Reinstall must have fixed this as well.
+
+From Amanda - running the as groovyc isbn.groovy compiles the code
+    Getting groovy.lang.MissingMethodException: No signature of method:
