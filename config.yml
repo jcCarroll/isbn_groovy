@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   build:
     working-directory: ~/tmp
-      - docker: circle/groovy
+      - docker: circleci/groovy
     steps:
       - checkout
       - run: test.groovy
