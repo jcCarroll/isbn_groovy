@@ -1,3 +1,8 @@
-test: 
-  override:
-    - test
+version: 2
+jobs:
+   build:
+     docker:
+       - image: circleci/groovy:2.5.0-beta-1>
+     steps:
+       - checkout
+       - run: echo "hello world"
