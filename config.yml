@@ -5,4 +5,4 @@ jobs:
        - image: circleci/java:8>
      steps:
        - checkout
-       - run: echo "hello world"
+       - run: test.groovy
