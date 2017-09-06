@@ -47,7 +47,7 @@ public class Isbn {
     }
 
     def RemoveSpacesAndDashes() {
-        isbn = isbn.replaceAll(" ","").replaceAll("-", "")
+        isbn = isbn.replaceAll("( |-)", "")
         if (isbn.length() == 10) {
             return isbn
         } else if (isbn.length() == 13) {
