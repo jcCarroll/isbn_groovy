@@ -5,13 +5,14 @@ class IsbnTest extends GroovyTestCase {
        assertToString(length.IsValidLength(), 'true')
    }
 
-   void testLengthThirteen() {
-       def length = new Isbn(isbn : '9780470059029')
-       assertToString(length.IsValidLength(), 'true')
-   }
+            void testLengthThirteen() {
+                def length = new Isbn(isbn : '9780470059029')
+                assertToString(length.IsValidLength(), 'true')
+            }
 
-//    void testRemoveEmptySpaces() {
-//        assertToString()
-//    }
+   void testRemoveEmptySpaces() {
+       def length = new Isbn(isbn : '0 471 95869 7')
+       assertToString()
+   }
 
 }
