@@ -12,12 +12,22 @@ class IsbnTest extends GroovyTestCase {
 
    void testRemoveEmptySpacesTen() {
        def spaces = new Isbn(isbn : '0 471 95869 7')
-       assertToString(spaces.RemoveSpaces(), '0471958697')
+       assertToString(spaces.RemoveSpacesAndDashes(), '0471958697')
    }
 
             void testRemoveEmptySpacesThirt() {
                 def spaces = new Isbn(isbn : '9 780 4700 5902 9')
-                assertToString(spaces.RemoveSpaces(), '9780470059029')
+                assertToString(spaces.RemoveSpacesAndDashes(), '9780470059029')
+            }
+
+    void testRemoveDashTen() {
+       def dashes = new Isbn(isbn : '0-471-95869-7')
+       assertToString(dashes.RemoveSpacesAndDashes(), '0471958697')
+   }
+
+            void testRemoveDashThirt() {
+                def dashes = new Isbn(isbn : '9-780-4700-5902-9')
+                assertToString(dashes.RemoveSpacesAndDashes(), '9780470059029')
             }
 
 }
