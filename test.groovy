@@ -11,8 +11,8 @@ class IsbnTest extends GroovyTestCase {
             }
 
    void testRemoveEmptySpaces() {
-       def length = new Isbn(isbn : '0 471 95869 7')
-       assertToString()
+       def spaces = new Isbn(isbn : '0 471 95869 7')
+       assertToString(spaces.RemoveSpaces(), 'true')
    }
 
 }
