@@ -54,4 +54,13 @@ public class Isbn {
             return isbn
         }
     }
+
+    def OnlyNumbers() {
+        isbn = isbn.split("\\d")
+        println "this is isbn ${isbn}"
+        if (isbn.length == 10) {
+
+        }
+        isbn = isbn.contains("[a-zA-Z")
+    }
 }
