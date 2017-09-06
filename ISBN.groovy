@@ -1,14 +1,11 @@
 public class Isbn {
-    String isbnTen
-    String isbnThirt
+    String isbn
 
-    Boolean IsTenDig() {
-        if (isbnTen.length() == 10)
+    Boolean IsValidLength() {
+        if (isbn.length() == 10) {
             return 'true'
-    }
-    
-    Boolean IsThirteenDig() {
-        if (isbnThirt.length() == 13)
+        } else if (isbn.length() == 13){
             return 'true'
+        }
     }
 }
