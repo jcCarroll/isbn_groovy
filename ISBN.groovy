@@ -67,9 +67,10 @@ public class Isbn {
     }
 
     def ValidTenIsbn() {
-        dashSpace = new Isbn()
-        dashSpace.RemoveSpacesAndDashes(isbn)
+        isbnClean = RemoveSpacesAndDashes(isbn)
+        // dashSpace.RemoveSpacesAndDashes(isbn)
 
-        println dashSpace
+        // println dashSpace
     }
+
 }
