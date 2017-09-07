@@ -19,11 +19,11 @@ class IsbnTest extends GroovyTestCase {
         assertToString(dashesTen.RemoveSpacesAndDashes(), '0471958697')
         def dashesThirt = new Isbn(isbn : '9-780-4700-5902-9')
         assertToString(dashesThirt.RemoveSpacesAndDashes(), '9780470059029')
-}
+    }
 
-    // void testStringOnlyNumbers() {
-    //     def numOnly = new Isbn(isbn : '123524875')
-    //     assertToString(numOnly.OnlyNumbers(), 'true')
-    // }
+    void testStringOnlyNumbers() {
+        def numOnly = new Isbn(isbn : '123456789x')
+        assertToString(numOnly.OnlyNumbers(), '123456789')
+    }
 
 }

@@ -37,6 +37,7 @@
 
 public class Isbn {
     String isbn
+    String result
 
     Boolean IsValidLength() {
         if (isbn.length() == 10) {
@@ -56,11 +57,12 @@ public class Isbn {
     }
 
     def OnlyNumbers() {
-        isbn = isbn.split("\\d")
-        println "this is isbn ${isbn}"
-        if (isbn.length == 10) {
-
+        isbn = isbn.toUpperCase()
+        if (isbn.endsWith('X')) {
+            isbn = isbn.minus('X')
         }
-        isbn = isbn.contains("[a-zA-Z")
+        if (isbn.contains('[a-zA-Z]+') == false) {
+            return isbn
+        }
     }
 }
