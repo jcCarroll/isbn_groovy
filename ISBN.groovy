@@ -28,32 +28,31 @@
 // first 9 digits of an isbn10: 742139476
 
 // create checksum:
-// sum = 1*7 + 2*4 + 3*2 + 4*1 + 5*3 + 6*9 7*4 + 8*7 + 9*6
+// sum = 1 * 7 + 2 * 4 + 3 * 2 + 4 * 1 + 5 * 3 + 6 * 9 + 7 * 4 + 8 * 7 + 9 * 6
 // sum = 7 + 8 + 6 + 4 + 15 + 54 + 28 + 56 + 54
 // sum = 232
-// checksum = 232%11
+// checksum = 232 % 11
 // checksum = 1
 // isbn = 7421394761
 
 public class Isbn {
     String isbn
-    int sum
 
     def ValidTenIsbn() {
         sum = 0
-        String[] splitIsbn;
+        String[] splitIsbn
+        String checksum
+        String 
         splitIsbn = isbn.split('')
-        isbnLast = splitIsbn.get(0)
-        // splitIsbn.eachWithIndex { num, index ->
-        //     sum += (index + 1) * value
-        // }
-        println(isbnLast)
+        checksum = splitIsbn.pop()
+
+        println(splitIsbn)
     }
 
     Boolean IsValidLength() {
         if (isbn.length() == 10) {
             return 'true'
-        } else if (isbn.length() == 13){
+        } else if (isbn.length() == 13) {
             return 'true'
         }
     }
