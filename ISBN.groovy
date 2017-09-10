@@ -37,7 +37,13 @@
 
 public class Isbn {
     String isbn
-    String result
+
+    def ValidTenIsbn() {
+        isbn = RemoveSpacesAndDashes()
+        isbn = OnlyNumbers()
+        if (IsValidLength())
+            return isbn        
+    }
 
     Boolean IsValidLength() {
         if (isbn.length() == 10) {
@@ -64,13 +70,6 @@ public class Isbn {
         if (isbn.contains('[a-zA-Z]+') == false) {
             return isbn
         }
-    }
-
-    def ValidTenIsbn() {
-        isbn = RemoveSpacesAndDashes()
-        isbn = IsValidLength()
-        isbn = OnlyNumbers()
-        
     }
 
 }
