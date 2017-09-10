@@ -1,6 +1,27 @@
 public class Isbn {
     String isbn
 
+    Boolean IsValidLength() {
+        if (isbn.length() == 10 || isbn.length() == 13) {
+            return 'true'
+        }
+    }
+
+    def RemoveSpacesAndDashes() {
+        isbn = isbn.replaceAll("( |-)", "")
+            return isbn
+    }
+
+    def OnlyNumbers() {
+        isbn = isbn.toUpperCase()
+        if (isbn.endsWith('X')) {
+            isbn = isbn.minus('X')
+        }
+        if (isbn.contains('[a-zA-Z]+') == false) {
+            return isbn
+        }
+    }
+
     def ValidTenIsbn() {
         def sum = 0
         String[] isbnArray
@@ -18,29 +39,6 @@ public class Isbn {
             return true
         } else {
             return false
-        }
-    }
-
-    Boolean IsValidLength() {
-        if (isbn.length() == 10) {
-            return 'true'
-        } else if (isbn.length() == 13) {
-            return 'true'
-        }
-    }
-
-    def RemoveSpacesAndDashes() {
-        isbn = isbn.replaceAll("( |-)", "")
-            return isbn
-    }
-
-    def OnlyNumbers() {
-        isbn = isbn.toUpperCase()
-        if (isbn.endsWith('X')) {
-            isbn = isbn.minus('X')
-        }
-        if (isbn.contains('[a-zA-Z]+') == false) {
-            return isbn
         }
     }
 
