@@ -37,12 +37,17 @@
 
 public class Isbn {
     String isbn
+    int sum
 
     def ValidTenIsbn() {
-        isbn = RemoveSpacesAndDashes()
-        isbn = OnlyNumbers()
-        if (IsValidLength())
-            return isbn        
+        sum = 0
+        String[] splitIsbn;
+        splitIsbn = isbn.split('')
+        isbnLast = splitIsbn.get(0)
+        // splitIsbn.eachWithIndex { num, index ->
+        //     sum += (index + 1) * value
+        // }
+        println(isbnLast)
     }
 
     Boolean IsValidLength() {
