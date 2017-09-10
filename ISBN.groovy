@@ -59,11 +59,7 @@ public class Isbn {
 
     def RemoveSpacesAndDashes() {
         isbn = isbn.replaceAll("( |-)", "")
-        if (isbn.length() == 10) {
             return isbn
-        } else if (isbn.length() == 13) {
-            return isbn
-        }
     }
 
     def OnlyNumbers() {
