@@ -3,7 +3,7 @@ public class Isbn {
 
     Boolean IsValidLength() {
         if (isbn.length() == 10 || isbn.length() == 13) {
-            return 'true'
+            return true
         }
     }
 
@@ -18,7 +18,7 @@ public class Isbn {
             isbn = isbn.minus('X')
         }
         if (isbn.contains('[a-zA-Z]+') == false) {
-            return isbn
+            return true
         }
     }
 
@@ -30,16 +30,12 @@ public class Isbn {
             isbnArray[9] = 10
         }
         isbnArray.eachWithIndex { number, index ->
-            if (index <= 8) {
+            if (index <= 8)
                 sum += (index + 1) * number.toInteger()
-            }
         }
         String check_sum = sum % 11
-        if (check_sum == isbnArray[9]) {
+        if (check_sum == isbnArray[9])
             return true
-        } else {
-            return false
-        }
     }
 
     def CheckThirteenIsbn() {
@@ -59,16 +55,18 @@ public class Isbn {
         int pre_check = 10 - pre_pre_check
         int check_sum = pre_check % 10
         int test = isbnArray[12].toInteger()
-        if (check_sum == test) {
+        if (check_sum == test)
             return true
-        } else {
-            return false
-        }
     }
 
     def ValidateIsbn() {
         isbn = RemoveSpacesAndDashes()
-        println isbn
+        if (IsValidLength() == true && OnlyNumbers() == true){
+            if (isbn.length() == 10) {
+                if (CheckTenIsbn() == true)
+                    return true
+            }
+        }
     }
 
 }
