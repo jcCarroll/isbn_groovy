@@ -36,4 +36,9 @@ class IsbnTest extends GroovyTestCase {
         assertToString(checkThirteenIsbn.CheckThirteenIsbn(), 'true')
     }
 
+    void testValidIsbn() {
+        def validTenDash = new Isbn(isbn : '0-321-14653-0')
+        assertToString(validTenDash.ValidateIsbn(), 'true')
+    }
+
 }
