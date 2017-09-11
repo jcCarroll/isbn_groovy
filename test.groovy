@@ -23,7 +23,7 @@ class IsbnTest extends GroovyTestCase {
 
     void testStringOnlyNumbers() {
         def numOnly = new Isbn(isbn : '123456789x')
-        assertToString(numOnly.OnlyNumbers(), '123456789')
+        assertToString(numOnly.OnlyNumbers(), 'true')
     }
 
     void testCheckTen() {
@@ -37,8 +37,10 @@ class IsbnTest extends GroovyTestCase {
     }
 
     void testValidIsbn() {
-        def validTenDash = new Isbn(isbn : '0-321-14653-0')
-        assertToString(validTenDash.ValidateIsbn(), 'true')
+        def validTenDashSpace = new Isbn(isbn : '0-321-14  6 53-0')
+        assertToString(validTenDashSpace.ValidateIsbn(), 'true')
+        def validThirteenDashSpace = new Isbn(isbn : '9 78-0-13-14 9505-0')
+        assertToString(validThirteenDashSpace.ValidateIsbn(), 'true')
     }
 
 }
