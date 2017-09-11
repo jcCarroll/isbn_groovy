@@ -64,7 +64,11 @@ public class Isbn {
         } else {
             return false
         }
+    }
 
+    def ValidateIsbn() {
+        isbn = RemoveSpacesAndDashes()
+        println isbn
     }
 
 }
