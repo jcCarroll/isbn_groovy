@@ -63,7 +63,12 @@ public class Isbn {
         isbn = RemoveSpacesAndDashes()
         if (IsValidLength() == true && OnlyNumbers() == true){
             if (isbn.length() == 10) {
+                println isbn
                 if (CheckTenIsbn() == true)
+                    return true
+            } else if (isbn.length() == 13) {
+                println isbn
+                if (CheckThirteenIsbn() == true)
                     return true
             }
         }
