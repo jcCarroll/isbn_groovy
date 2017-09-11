@@ -22,7 +22,7 @@ public class Isbn {
         }
     }
 
-    def ValidTenIsbn() {
+    def CheckTenIsbn() {
         def sum = 0
         String[] isbnArray
         isbnArray = isbn
@@ -42,7 +42,7 @@ public class Isbn {
         }
     }
 
-    def ValidThirteenIsbn() {
+    def CheckThirteenIsbn() {
         def sum = 0
         String[] isbnArray
         isbnArray = isbn
